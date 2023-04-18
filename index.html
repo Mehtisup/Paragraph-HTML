@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Toggle Switch</title>
+<meta charset="utf-8">
+<meta name="viewport" content=
+"device-wdith, initial-scale=1">
+<style>
+body {
+    font-family: Arial;
+    background-color: black;
+    color: white;
+}
+.switch {
+    width:60px;
+    height:30px;
+    cursor:pointer;
+    position:relative;
+    display:inline-block;
+}
+input .switch {
+    width:0;
+    height:0;
+    opacity:0;
+}
+.slider {
+    left:0;
+    right:0;
+    top:0;
+    bottom:0;
+    border-radius: 50px;
+    background-color:
+  #2196F3;  
+    position:absolute;
+}
+.slider::after {
+    content:"";
+    width:20px;
+    position: absolute;
+    height:20px;
+    background-color:
+  white;
+    border-radius: 50%;
+    left:5px;
+    transition: 0.3s;
+    bottom:5px;
+}
+input:checked + .slider {
+    background-color: #ccc;
+}
+input:checked + .slider::after {
+    transform: translateX(29px);
+    transition: 0.3s;
+}
+.push {
+    background-color: white;
+    color:black;
+}
+</style>
+</head>
+<body>
+<h1>Toggle Switch</h1>
+<p>Make a toggle switch (ON/OFF)
+with programming languages.</p>
+<br>
+<label class="switch">
+    <input type="checkbox">
+    <span class="slider" onclick=
+    "myFunction()"></span>
+</label>
+<script>
+function myFunction() {
+    var bod = document.body;
+    bod.classList.toggle("push");
+}
+</script>
+
+</body>
+</html>
